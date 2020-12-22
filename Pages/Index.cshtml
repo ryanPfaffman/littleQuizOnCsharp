@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>@ViewData["Question1"]</p>
+    <input type="radio" value="t" name="question1"><label for="question1T">True</label>
+    <input type="radio" value="f" name="question1"><label for="question1F">False</label>
+    <br>
+    <p>@ViewData["Question2"]</p>
+    <input type="radio" value="t" name="question2"><label for="question2T">True</label>
+    <input type="radio" value="f" name="question2"><label for="question2F">False</label>
+    <br>
+    <p>@ViewData["Question3"]</p>
+    <input type="radio" value="t" name="question3"><label for="question3T">True</label>
+    <input type="radio" value="f" name="question3"><label for="question3F">False</label>
+    <br>
+    <p>@ViewData["Question4"]</p>
+    <input type="radio" value="t" name="question4"><label for="question4T">True</label>
+    <input type="radio" value="f" name="question4"><label for="question4F">False</label>
+    <br>
+    <p>@ViewData["Question5"]</p>
+    <input type="radio" value="t" name="question5"><label for="question5T">True</label>
+    <input type="radio" value="f" name="question5"><label for="question5F">False</label>
+    <br>
+    <input id="button" type="submit" value="submit">
+    <p id="numCorrect1"> </p>
+</div>
