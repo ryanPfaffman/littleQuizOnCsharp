@@ -26,8 +26,6 @@ namespace quizGui.Pages
 
         public void OnGet()
         {
-            Question question = new Question();
-
             IList<Question> questionList = new List<Question>();
             questionList.Add(new Question() { question = "C# programmers use Pascal casting when creating method names since this convention is required to produce a workable program", name = "question1" });
             questionList.Add(new Question() { question = "The C# programming language was developed as an object and compound-oriented language", name = "question2" });
