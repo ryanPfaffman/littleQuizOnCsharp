@@ -1,20 +1,50 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "C# Quiz";
 }
 
 <div class="text-center">
-    <h1>Little C# Quiz and GUI with ASP.NET Test</h1>
+    <h1 id="indexTitle">Little C# Quiz and GUI with ASP.NET Test</h1>
     
    
     @foreach (var q in ViewData["QuestionArr"] as IList<Question>)
     {
         <p>
-            @q.question
+        @q.question
         </p>
-        <input type="radio" value="t" name=@q.name><label for="question1T">True</label>
-        <input type="radio" value="f" name=@q.name><label for="question1F">False</label>
+        @if (q.type == "tf") 
+        {
+            <input type="radio" value="t" name=@q.name><label for="question1T">True</label>
+            <input type="radio" value="f" name=@q.name><label for="question1F">False</label>
+        } else if (q.type == "mc")
+        {
+            <p>
+            &ensp; A) @q.mCA
+            </p>
+            <p>
+            &ensp; B) @q.mCB
+            </p>
+            <p>
+            &ensp; C) @q.mCC
+            </p>
+            <p>
+            &ensp; D) @q.mCD
+            </p>
+            <input type="radio" value="a" name=@q.name><label for="question1T">A</label>
+            <input type="radio" value="b" name=@q.name><label for="question1F">B</label>
+            <input type="radio" value="c" name=@q.name><label for="question1T">C</label>
+            <input type="radio" value="d" name=@q.name><label for="question1F">D</label>
+            
+
+        } else
+        {
+           <textarea id = @q.tAId>
+
+           </textarea>
+
+        }
+        
 
         <p id=@q.pId hidden>@q.ans</p>
     }
