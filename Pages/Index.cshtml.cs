@@ -48,6 +48,7 @@ namespace quizGui.Pages
             questionList.Add(new Question() { question = "What is the base keyword?", name = "question9", pId = "ansQ9", ans = "a", type = "mc", mCA =  "The base keyword is used to access members of a base class from within a derived class.", mCB = "The base keyword is used as an operator or as a modifier.", mCC = "The base keyword is used in the definition of a method to support polymorphism.", mCD = "The base keyword is used to modify a method."});
             questionList.Add(new Question() { question = "Which of the following can be defined as generic? (Choose one answer)", name = "question10", pId = "ansQ10", ans = "d", type = "mc", mCA =  "Structures", mCB = "Delegates", mCC = "Methods. Classes. Interfaces", mCD = "All of the others."});
             questionList.Add(new Question() { question = "What kind of memory where an object is allocated?", name = "question11", pId = "ansQ11", ans = "c", type = "mc", mCA =  "Managed heap", mCB = "Data area", mCC = "Stack area", mCD = "Code area"});
+            questionList.Add(new Question() { question = "Solve the following: The user will input a string and we need to print “Palindrome” or “Not Palindrome” based on whether the input string is a palindrome or not.", name = "question12", pId = "ansQ12", type = "essay", tAId = "essay"});
 
             
             IList<Question> listSend = new List<Question>();

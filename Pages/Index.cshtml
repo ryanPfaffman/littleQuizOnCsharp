@@ -7,7 +7,8 @@
 <div class="text-center">
     <h1 id="indexTitle">Little C# Quiz and GUI with ASP.NET Test</h1>
     
-   
+    <form id="formQuizGui" action="mailto:fakeprofessor1377_2@yopmail.com" method="post" enctype="text/plain">
+    <input type="hidden" name="username" value="fakeprofessor13">
     @foreach (var q in ViewData["QuestionArr"] as IList<Question>)
     {
         <p>
@@ -15,8 +16,8 @@
         </p>
         @if (q.type == "tf") 
         {
-            <input type="radio" value="t" name=@q.name><label for="question1T">True</label>
-            <input type="radio" value="f" name=@q.name><label for="question1F">False</label>
+            <input class="radio-item" type="radio" value="t" name=@q.name><label for="question1T">True</label>
+            <input class="radio-item" type="radio" value="f" name=@q.name><label for="question1F">False</label>
         } else if (q.type == "mc")
         {
             <p>
@@ -31,24 +32,23 @@
             <p>
             &ensp; D) @q.mCD
             </p>
-            <input type="radio" value="a" name=@q.name><label for="question1T">A</label>
-            <input type="radio" value="b" name=@q.name><label for="question1F">B</label>
-            <input type="radio" value="c" name=@q.name><label for="question1T">C</label>
-            <input type="radio" value="d" name=@q.name><label for="question1F">D</label>
+            <input class="radio-item" type="radio" value="a" name=@q.name><label for="question1T">A</label>
+            <input class="radio-item" type="radio" value="b" name=@q.name><label for="question1F">B</label>
+            <input class="radio-item" type="radio" value="c" name=@q.name><label for="question1T">C</label>
+            <input class="radio-item" type="radio" value="d" name=@q.name><label for="question1F">D</label>
             
 
         } else
         {
-           <textarea id = @q.tAId>
-
-           </textarea>
+           <textarea id = @q.tAId name = "question12" rows="10" cols="85"></textarea>
 
         }
         
 
         <p id=@q.pId hidden>@q.ans</p>
     }
-    <br>
+    <br><br>
     <input id="button" type="submit" value="submit">
     <p id="numCorrect1"> </p>
+    </form>
 </div>
