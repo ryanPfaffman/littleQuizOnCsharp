@@ -12,8 +12,6 @@ namespace quizGui.Pages
     public class Question
     {
         public string question;
-        public string value1;
-        public string value2;
         public string name;
     }
 
@@ -31,19 +29,13 @@ namespace quizGui.Pages
             Question question = new Question();
 
             IList<Question> questionList = new List<Question>();
-            questionList.Add(new Question() { question = "C# programmers use Pascal casting when creating method names since this convention is required to produce a workable program", value1 = "t", value2 = "f", name = "question1" });
-            questionList.Add(new Question() { question = "The C# programming language was developed as an object and compound-oriented language", value1 = "t", value2 = "f", name = "question2" });
-            questionList.Add(new Question() { question = "When the keyword Void is used in the Main() method header, it indicates that the Main() method is empty", value1 = "f", value2 = "t", name = "question3" });
-            questionList.Add(new Question() { question = "You can use the /out Compiler Option between the csc command and the name of the .cs file to indicate the name of the output file", value1 = "f", value2 = "t", name = "question4" });
-            questionList.Add(new Question() { question = "Flowchart creators use diamond shapes to indicate alternative courses of action", value1 = "t", value2 = "f", name = "question5" });
+            questionList.Add(new Question() { question = "C# programmers use Pascal casting when creating method names since this convention is required to produce a workable program", name = "question1" });
+            questionList.Add(new Question() { question = "The C# programming language was developed as an object and compound-oriented language", name = "question2" });
+            questionList.Add(new Question() { question = "When the keyword Void is used in the Main() method header, it indicates that the Main() method is empty", name = "question3" });
+            questionList.Add(new Question() { question = "You can use the /out Compiler Option between the csc command and the name of the .cs file to indicate the name of the output file", name = "question4" });
+            questionList.Add(new Question() { question = "Flowchart creators use diamond shapes to indicate alternative courses of action", name = "question5" });
 
             ViewData["QuestionArr"] = questionList;
-
-            ViewData["Question1"] = "C# programmers use Pascal casting when creating method names since this convention is required to produce a workable program";
-            ViewData["Question2"] = "The C# programming language was developed as an object and compound-oriented language";
-            ViewData["Question3"] = "When the keyword Void is used in the Main() method header, it indicates that the Main() method is empty";
-            ViewData["Question4"] = "You can use the /out Compiler Option between the csc command and the name of the .cs file to indicate the name of the output file";
-            ViewData["Question5"] = "Flowchart creators use diamond shapes to indicate alternative courses of action";
 
         }
     }
